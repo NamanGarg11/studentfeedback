@@ -1,0 +1,174 @@
+/* Reset and Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    background: linear-gradient(135deg, #888a8c, #00c6ff);
+}
+h2{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+      
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    gap: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Login Form Styling */
+.login-form {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 42px;
+    justify-content: center;
+    animation: slideIn 1s ease-in-out;
+}
+#checkbox-label{
+     display:inline;
+     
+}
+
+
+.login-form h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.login-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+    display: block;
+}
+
+.login-form input {
+    margin-bottom: 1.2rem;
+    padding: 0.8rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.checkbox {
+    margin-bottom: 1.5rem;
+    display: flex;
+    font-size: 12px;
+    width: 100px;
+}
+
+.checkbox input {
+     margin-right: 0.9rem;
+}
+
+.checkbox a {
+    color:  #c5c7c8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.checkbox a:hover {
+    text-decoration: underline;
+}
+
+.login-form button {
+    padding: 0.8rem;
+    background-color: #3eaee6;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-form button:hover {
+    background-color:  #1388c3;;
+    transform: translateY(-2px);
+}
+
+.login-form button:active {
+    transform: translateY(0);
+}
+
+/* Photo Section Styling */
+.photo-section {
+    
+    flex: 1;
+    background: url('your-photo.jpg') center center/cover no-repeat;
+    animation: fadeInPhoto 1.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 0px;
+}
+.photo-section img{
+    max-width: 40vw;  /* Ensures image fits within the defined box */
+    max-height: 100%; /* Ensures image fits within the defined box */
+    width: 35vw; /* Fixed width */
+    height: 100%; /* Keeps aspect ratio */
+    border-radius: 8px;
+}
+.sub{
+    text-align: center;
+    margin-bottom: 66px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInPhoto {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

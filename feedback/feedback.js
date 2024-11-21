@@ -34,3 +34,22 @@ document.getElementById("feedbackForm").addEventListener("submit", function(even
     // Clear form fields
     document.getElementById("feedbackForm").reset();
 });
+// Select the form and thank-you message
+const form = document.querySelector('form');
+const thankYouMessage = document.querySelector('.thank-you-message');
+
+// Add an event listener to handle form submission
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // Prevent actual form submission
+  
+  // Show thank-you message
+  thankYouMessage.style.display = 'block';
+  
+  // Optionally clear the form inputs
+  form.reset();
+
+  // Fade out the message after a few seconds
+  setTimeout(() => {
+    thankYouMessage.style.display = 'none';
+  }, 3000);
+});

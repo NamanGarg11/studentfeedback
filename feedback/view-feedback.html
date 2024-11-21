@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Feedback</title>
+    <link rel="stylesheet" href="feedback-display.css">
+</head>
+<body>
+    <div class="container">
+        <h1>All Feedback</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search feedback..." oninput="searchFeedback()">
+        </div>
+        
+        <div id="feedbackList"></div>
+        
+        <div class="feedback-message" id="noFeedbackMessage">No feedback available.</div>
+    </div>
+
+    <script src="view-feedback.js"></script>
+</body>
+</html>

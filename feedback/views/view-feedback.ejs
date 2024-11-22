@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Feedback</title>
+    <link rel="stylesheet" href="/css/feedback.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>All Feedback</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search feedback...">
+        </div>
+
+        <div class="feedback-boxes">
+            <% feedbacks.forEach(feedback=> { %>
+                <div class="feedback-box">
+                    <h3 class="feedback-title">
+                        <%= feedback.name %> - Feedback
+                    </h3>
+                    <p><strong>Email:</strong>
+                        <%= feedback.email %>
+                    </p>
+                    <p><strong>Advice:</strong>
+                        <%= feedback.advice %>
+                    </p>
+                    <p><strong>Challenges:</strong>
+                        <%= feedback.challenges %>
+                    </p>
+                    <p><strong>Recommendations:</strong>
+                        <%= feedback.recommendations %>
+                    </p>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+
+    <script src="view-feedback.js"></script>
+</body>
+
+</html>

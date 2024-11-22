@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Student Feedback Submission</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Submission</h1>
+        <p class="instruction">Please provide your valuable feedback and advice for your juniors to help them with their journey!</p>
+        
+        <form id="feedbackForm" method="post" action="/submit">
+            <div class="input-group">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="advice"></label>
+                <textarea id="advice" name="advice" placeholder="Enter your advice for juniors" rows="5" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="challenges"></label>
+                <textarea id="challenges" name="challenges" placeholder="Describe the biggest challenge you faced" rows="5" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="recommendations"></label>
+                <textarea id="recommendations" name="recommendations" placeholder="What would you recommend to newcomers?" rows="5" required></textarea>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">I agree to the terms and conditions</label>
+            </div>
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+
+        <div class="feedback-message" id="feedbackMessage"></div>
+    </div>
+
+    <script src="feedback.js"></script>
+</body>
+</html>

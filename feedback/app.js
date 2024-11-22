@@ -36,6 +36,9 @@ app.get('/view', async (req, res) => {
 app.get("/", (req, res) => {
   res.render("page1")
 })
+app.get("/registration",(req,res)=>{
+  res.render("registration");
+})
 
 app.post("/submit", async (req, res) => {
   const { name, email, advice, challenges, recommendations, agree } = req.body;

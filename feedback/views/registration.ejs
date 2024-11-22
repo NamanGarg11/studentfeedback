@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/registration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h2>Student Registration</h2>
+            <form action="/submit" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="library-id">Library ID</label>
+                <input type="text" id="library-id" name="library-id" placeholder="Enter your Library ID" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                <div class="sub">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+        <div class="photo-section">
+            <!-- Updated image source and added CSS class for better responsiveness -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmJLZrMnDdB75tiiPuvpAMhkSCPVLVmqoVkA&s" alt="Side Photo">
+        </div>
+    </div>
+    <script src="/feedback/public/js/registration.js"></script>
+</body>
+</html>
+

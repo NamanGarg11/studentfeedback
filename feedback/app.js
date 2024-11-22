@@ -24,13 +24,17 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("/feedback", (req, res) => {
   res.render("feedback");
 });
 
 app.get('/view', async (req, res) => {
     const feedbacks = await Feedback.find({});
     res.render("view-feedback", {feedbacks})
+})
+
+app.get("/", (req, res) => {
+  res.render("page1")
 })
 
 app.post("/submit", async (req, res) => {
@@ -45,7 +49,7 @@ app.post("/submit", async (req, res) => {
   });
 
   await newFeedback.save();
-  res.send("Feedback Saved Successfully");
+  res.redirect("/view");
 });
 
 app.listen(5000, () => {
